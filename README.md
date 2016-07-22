@@ -4,3 +4,5 @@ We gonna be the very best, that no one ever was...to catch them all is my real t
 
 Developers:
 - rebeccaruva
+- Kazandra
+- Nick
