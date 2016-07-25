@@ -5,6 +5,12 @@ import os
 import logging
 import webapp2
 
+env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
+
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+jinja_environment = jinja2.Environment(
+  loader=jinja2.FileSystemLoader(template_dir))
+
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -30,10 +36,6 @@ class ListHandler(webapp2.RequestHandler):
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self,template,quote):
-
-
-class LoginHandler(webapp2.RequestHandler):
-
 
 
 class EmailHandler(webapp2.RequestHandler):
