@@ -6,10 +6,8 @@ import logging
 import webapp2
 <<<<<<< HEAD
 import urllib2
-=======
 import schedule
 import time
->>>>>>> a3ef5901900d6f1f55603ec8b4b4573af9af4b23
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 
@@ -30,11 +28,9 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('<a href="%s">Register with your Gmail account</a>.' %
                 users.create_login_url('/'))
         self.response.out.write('<html><body>%s</body></html>' % greeting)
-<<<<<<< HEAD
 
 #class TimeLineHandler(webapp2.RequestHandler):
 
-=======
 
 class TimeLineHandler(webapp2.RequestHandler):
 
@@ -53,13 +49,10 @@ schedule.every().wednesday.at("13:15").do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
->>>>>>> a3ef5901900d6f1f55603ec8b4b4573af9af4b23
 
 #class AddEventHandler(webapp2.RequestHandler):
 
-<<<<<<< HEAD
-=======
-"""
+
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('addEvent.html')
@@ -68,11 +61,10 @@ class AddEventHandler(webapp2.RequestHandler):
 class ExpandListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
->>>>>>> a3ef5901900d6f1f55603ec8b4b4573af9af4b23
+
 
 #class ExpandListHandler(webapp2.RequestHandler):
 
-<<<<<<< HEAD
 
 #class ListHandler(webapp2.RequestHandler):
 
@@ -89,7 +81,6 @@ class QuoteHandler(webapp2.RequestHandler):
 
 #class EmailHandler(webapp2.RequestHandler):
 
-=======
 class ListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
@@ -102,17 +93,13 @@ class QuoteHandler(webapp2.RequestHandler):
 class EmailHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
->>>>>>> a3ef5901900d6f1f55603ec8b4b4573af9af4b23
 
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-<<<<<<< HEAD
   ('/quote', QuoteHandler),
-=======
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler)
->>>>>>> a3ef5901900d6f1f55603ec8b4b4573af9af4b23
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
