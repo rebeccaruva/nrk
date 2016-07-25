@@ -31,7 +31,9 @@ class LoginHandler(webapp2.RequestHandler):
 
 
 class TimeLineHandler(webapp2.RequestHandler):
-    def get (self):
+    def get(self):
+        template = jinja_environment.get_template('Homepage.html')
+        self.response.out.write(template.render())
         self.response.out.write("example return!!")
 
 #class AddEventHandler(webapp2.RequestHandler):
@@ -65,6 +67,8 @@ class ExpandListHandler(webapp2.RequestHandler):
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self):
+        template = jinja_environment.get_template('checked.html')
+        self.response.out.write(template.render())
         response = urllib2.urlopen("http://quotes.rest/qod.json")
         NowDict = json.loads(response.read())
         Quote = NowDict["contents"]["quotes"][0]["quote"]
@@ -84,7 +88,7 @@ class EmailHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  ('/quote', QuoteHandler),
+  ('/home', QuoteHandler),
   ('/list', ListHandler),
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
