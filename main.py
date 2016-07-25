@@ -20,10 +20,10 @@ class QuoteHandler(webapp2.RequestHandler):
     def get(self,template,quote):
 
 
-class WelcomePageHandler(webapp2.RequestHandler):
-    def get(self, template):
+class LoginHandler(webapp2.RequestHandler):
 
 
+class EmailHandler(webapp2.RequestHandler):
 
 
 
