@@ -4,7 +4,6 @@ import jinja2
 import os
 import logging
 import webapp2
-<<<<<<< HEAD
 import urllib2
 import schedule
 import time
@@ -29,26 +28,35 @@ class LoginHandler(webapp2.RequestHandler):
                 users.create_login_url('/'))
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
+
 #class TimeLineHandler(webapp2.RequestHandler):
 
-
 class TimeLineHandler(webapp2.RequestHandler):
-
-    def job():
-        print("I'm working...")
-
-schedule.every(10).minutes.do(job)
-schedule.every().hour.do(job)
-schedule.every().day.at("10:30").do(job)
-schedule.every().monday.do(job)
-schedule.every().wednesday.at("13:15").do(job)
-
     def get (self):
         self.response.out.write("example return!!")
 
 while True:
     schedule.run_pending()
     time.sleep(1)
+
+#class AddEventHandler(webapp2.RequestHandler):
+
+
+#     def job():
+#         print("I'm working...")
+#
+# schedule.every(10).minutes.do(job)
+# schedule.every().hour.do(job)
+# schedule.every().day.at("10:30").do(job)
+# schedule.every().monday.do(job)
+# schedule.every().wednesday.at("13:15").do(job)
+#
+#     def get (self):
+#         self.response.out.write("example return!!")
+#
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
 
 #class AddEventHandler(webapp2.RequestHandler):
 
@@ -65,6 +73,7 @@ class ExpandListHandler(webapp2.RequestHandler):
 
 #class ExpandListHandler(webapp2.RequestHandler):
 
+#class ExpandListHandler(webapp2.RequestHandler):
 
 #class ListHandler(webapp2.RequestHandler):
 
@@ -93,6 +102,7 @@ class QuoteHandler(webapp2.RequestHandler):
 class EmailHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
+
 
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
