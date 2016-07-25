@@ -32,7 +32,7 @@ class LoginHandler(webapp2.RequestHandler):
 #class TimeLineHandler(webapp2.RequestHandler):
 
 class TimeLineHandler(webapp2.RequestHandler):
-    def get (self):
+    def get(self):
         self.response.out.write("example return!!")
 
 while True:
