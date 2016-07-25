@@ -88,6 +88,7 @@ routes = [
   ('/list', ListHandler),
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
-  ('/email', EmailHandler)
+  ('/email', EmailHandler),
+  ('/add-event', AddEventHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
