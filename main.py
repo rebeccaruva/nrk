@@ -24,6 +24,7 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('<a href="%s">Register with your Gmail account</a>.' %
                 users.create_login_url('/'))
         self.response.out.write('<html><body>%s</body></html>' % greeting)
+        
 """
 class TimeLineHandler(webapp2.RequestHandler):
 
