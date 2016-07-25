@@ -2,9 +2,20 @@
 <html>
   <head>
     <title>CheckList</title>
-      <body background = "static/checkback.jpg">
-        <p>Incoporate a checkbox<input type="checkbox" name="demo"
-          value="one"/></p>
-      </body>
   </head>
+  <body>
+    <h2>Welcome to CheckList {{user}}!</h2>
+  <div align=center>
+    <form method="post" action=post-message>
+      <textarea name = "text" cols=60, rows=5/></textarea>
+    <p><input type = "submit"></p>
+  </form>
+  </div>
+<!--  <div align =right><a href ={{logout_url}}>logout</a></div>-->
+  <hr>
+  { % for message in messages_list %}
+    <h4>{{message.user}} {{message.timestamp}}</h4>
+    <p>{{message.text}}</p>
+  </hr>
+  </body>
 </html>
