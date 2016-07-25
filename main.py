@@ -5,7 +5,7 @@ import os
 import logging
 import webapp2
 import urllib2
-import schedule
+# import schedule
 import time
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
@@ -29,11 +29,9 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
 
-
 class TimeLineHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
-
 
 #class AddEventHandler(webapp2.RequestHandler):
 
