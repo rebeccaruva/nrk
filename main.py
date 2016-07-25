@@ -5,7 +5,8 @@ import os
 import logging
 import webapp2
 import urllib2
-
+# import schedule
+import time
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 
@@ -29,12 +30,31 @@ class LoginHandler(webapp2.RequestHandler):
 
 
 
-
 class TimeLineHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('Homepage.html')
         self.response.out.write(template.render())
         self.response.out.write("example return!!")
+
+#class AddEventHandler(webapp2.RequestHandler):
+
+
+#     def job():
+#         print("I'm working...")
+#
+# schedule.every(10).minutes.do(job)
+# schedule.every().hour.do(job)
+# schedule.every().day.at("10:30").do(job)
+# schedule.every().monday.do(job)
+# schedule.every().wednesday.at("13:15").do(job)
+#
+#     def get (self):
+#         self.response.out.write("example return!!")
+#
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
+
 
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
@@ -72,6 +92,7 @@ routes = [
   ('/list', ListHandler),
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
-  ('/email', EmailHandler)
+  ('/email', EmailHandler),
+  ('/add-event', AddEventHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
