@@ -9,9 +9,9 @@ function drawChart() {
   dataTable.addColumn({ type: 'date', id: 'Start' });
   dataTable.addColumn({ type: 'date', id: 'End' });
   dataTable.addRows([
-    [ 'Magnolia', 'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
-    [ 'Magnolia', 'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-    [ 'Magnolia', 'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
+    [ 'Center', 'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
+    [ 'Center', 'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
+    [ 'Center', 'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
     [ 'Google', 'Basic Python',   new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
     [ 'Google', 'Intermediate Python',       new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
     [ 'Google', 'Python Review',        new Date(0,0,0,16,30,0), new Date(0,0,0,18,0,0) ],
