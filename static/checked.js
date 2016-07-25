@@ -9,15 +9,15 @@ function drawChart() {
   dataTable.addColumn({ type: 'date', id: 'Start' });
   dataTable.addColumn({ type: 'date', id: 'End' });
   dataTable.addRows([
-    [ 'Magnolia',  'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
-    [ 'Magnolia',  'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-    [ 'Magnolia',  'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
+    [ 'Magnolia', 'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
+    [ 'Magnolia', 'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
+    [ 'Magnolia', 'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
     [ 'Google', 'Intermediate Perl',   new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
     [ 'Google', 'Advanced Perl',       new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
     [ 'Google', 'Applied Perl',        new Date(0,0,0,16,30,0), new Date(0,0,0,18,0,0) ],
-    [ 'Conference Room',   'Google Charts',       new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
-    [ 'Conference Room',   'Closure',             new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-    [ 'Conference Room',   'App Engine',          new Date(0,0,0,16,30,0), new Date(0,0,0,18,30,0) ]]);
+    [ 'Conference Room', 'Google Charts',  new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
+    [ 'Conference Room', 'Closure',        new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
+    [ 'Conference Room', 'App Engine',     new Date(0,0,0,16,30,0), new Date(0,0,0,18,30,0) ]]);
 
   var options = {
     timeline: { colorByRowLabel: true },
