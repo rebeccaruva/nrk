@@ -86,13 +86,6 @@ class EmailHandler(webapp2.RequestHandler):
 
 
 
-class Team(ndb.Model):
-    number = ndb.IntegerProperty()
-    location = ndb.StringProperty()
-
-
-
-
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
