@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Checked.</title>
-    <link rel="stylesheet" href="static/login.css"/>
+    <link rel="stylesheet" href="static/checked.css"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style type="text/css">a {text-decoration: none}</style>
@@ -13,38 +13,8 @@
     <h4><center>The interactive website to help motivate your daily schedule</center></h4>
     <h5><center>Presented to you by N.R.K.</center></h5>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="static/checked.js"></script>
 
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["timeline"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var container = document.getElementById('example5.3');
-        var chart = new google.visualization.Timeline(container);
-        var dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({ type: 'string', id: 'Room' });
-        dataTable.addColumn({ type: 'string', id: 'Name' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
-        dataTable.addRows([
-          [ 'Kayak',  'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
-          [ 'Troll',  'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-          [ 'Kayak',  'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
-          [ 'Google', 'Intermediate Perl',   new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
-          [ 'Google', 'Advanced Perl',       new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-          [ 'Google', 'Applied Perl',        new Date(0,0,0,16,30,0), new Date(0,0,0,18,0,0) ],
-          [ 'Conference Room',   'Google Charts', new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
-          [ 'Conference Room',   'Closure',       new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-          [ 'Conference Room',   'App Engine',    new Date(0,0,0,16,30,0), new Date(0,0,0,18,30,0) ]]);
-
-        var options = {
-          timeline: { colorByRowLabel: true },
-          backgroundColor: '#ffd'
-        };
-
-        chart.draw(dataTable, options);
-      }
-    </script>
 
     <div id="example5.3" style="height: 150px;"></div>
   </body>
