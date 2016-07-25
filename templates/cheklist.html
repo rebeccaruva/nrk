@@ -3,15 +3,19 @@
   <head>
     <title>Checked</title>
   </head>
+<<<<<<< HEAD
+  <body background ="static/registerwelcome.jpg">
+    <h2>Welcome to CheckList {{user}}!</h2>
+=======
   <body>
     <h2>Welcome to Checked {{user}}!</h2>
+>>>>>>> 1f2bb9ccfbefad9261ea5fae0a51990e3819b367
   <div align=center>
     <form method="post" action=post-message>
       <textarea name = "text" cols=60, rows=5/></textarea>
     <p><input type = "submit"></p>
   </form>
   </div>
-<!--  <div align =right><a href ={{logout_url}}>logout</a></div>-->
   <hr>
   { % for message in messages_list %}
     <h4>{{message.user}} {{message.timestamp}}</h4>
