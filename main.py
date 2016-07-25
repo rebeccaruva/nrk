@@ -15,6 +15,9 @@ jinja_environment = jinja2.Environment(
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
+        template = jinja_environment.get_template('login.html')
+        self.response.out.write(template.render())
+
         user = users.get_current_user()
         if user:
             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
@@ -25,6 +28,7 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
 class TimeLineHandler(webapp2.RequestHandler):
+
     def job():
         print("I'm working...")
 
@@ -34,6 +38,9 @@ schedule.every().day.at("10:30").do(job)
 schedule.every().monday.do(job)
 schedule.every().wednesday.at("13:15").do(job)
 
+    def get (self):
+        self.response.out.write("example return!!")
+
 while True:
     schedule.run_pending()
     time.sleep(1)
@@ -41,22 +48,32 @@ while True:
 
 """
 class AddEventHandler(webapp2.RequestHandler):
-
+    def get(self):
+        template = jinja_environment.get_template('addEvent.html')
+        self.response.out.write(template.render())
 
 class ExpandListHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 class ListHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self,template,quote):
+        self.response.out.write("example return!!")
 
 class EmailHandler(webapp2.RequestHandler):
-"""
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 routes = [
   ('/', LoginHandler),
+  ('/home', TimeLineHandler),
+  ('/checked-list', ExpandListHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
