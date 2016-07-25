@@ -38,6 +38,8 @@ class QuoteHandler(webapp2.RequestHandler):
     def get(self,template,quote):
 
 
+
+
 class EmailHandler(webapp2.RequestHandler):
 
 
@@ -45,6 +47,7 @@ class EmailHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
+
 
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
