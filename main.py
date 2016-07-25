@@ -29,15 +29,11 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
 
-#class TimeLineHandler(webapp2.RequestHandler):
 
 class TimeLineHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
 
 #class AddEventHandler(webapp2.RequestHandler):
 
@@ -58,8 +54,6 @@ while True:
 #     schedule.run_pending()
 #     time.sleep(1)
 
-#class AddEventHandler(webapp2.RequestHandler):
-
 
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
@@ -69,14 +63,6 @@ class AddEventHandler(webapp2.RequestHandler):
 class ExpandListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
-
-
-
-#class ExpandListHandler(webapp2.RequestHandler):
-
-#class ExpandListHandler(webapp2.RequestHandler):
-
-#class ListHandler(webapp2.RequestHandler):
 
 
 class QuoteHandler(webapp2.RequestHandler):
