@@ -1,12 +1,12 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 36px;
+  color: #400000;
 }
 
 html {
-  background-image: url("static/registerwelcome.jpg");
+  background-image: url("/static/darkgray.jpeg");
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
-
-
-  /*font-family: 'Raleway', sans-serif;*/
