@@ -36,7 +36,8 @@ class ListHandler(webapp2.RequestHandler):
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self,template,quote):
-
+        quote = quotes.get("http://quotes.rest/qod.json")
+        print(quote.content)
 
 
 
@@ -47,7 +48,7 @@ class EmailHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-
+  ('/quote', QuoteHandler)
 
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
