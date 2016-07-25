@@ -25,8 +25,9 @@ class LoginHandler(webapp2.RequestHandler):
                 users.create_login_url('/'))
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
-"""
 class TimeLineHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 class AddEventHandler(webapp2.RequestHandler):
@@ -35,16 +36,22 @@ class AddEventHandler(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 class ExpandListHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 class ListHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self,template,quote):
+        self.response.out.write("example return!!")
 
 class EmailHandler(webapp2.RequestHandler):
-"""
+    def get (self):
+        self.response.out.write("example return!!")
 
 
 routes = [
