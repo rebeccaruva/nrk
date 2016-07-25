@@ -22,21 +22,21 @@ class LoginHandler(webapp2.RequestHandler):
                 users.create_login_url('/'))
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
-class TimeLineHandler(webapp2.RequestHandler):
+#class TimeLineHandler(webapp2.RequestHandler):
 
 
-class AddEventHandler(webapp2.RequestHandler):
+#class AddEventHandler(webapp2.RequestHandler):
 
 
-class ExpandListHandler(webapp2.RequestHandler):
+#class ExpandListHandler(webapp2.RequestHandler):
 
 
-class ListHandler(webapp2.RequestHandler):
+#class ListHandler(webapp2.RequestHandler):
 
 
 class QuoteHandler(webapp2.RequestHandler):
-    def get(self,template,quote):
-        quote = quotes.get("http://quotes.rest/qod.json")
+    def get(self):
+        quote = quotes.get("http://quotes.rest/quote.json")
         print(quote.content)
 
 
@@ -48,7 +48,6 @@ class EmailHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  ('/quote', QuoteHandler)
-
+  ('/quote', QuoteHandler),
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
