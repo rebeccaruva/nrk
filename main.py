@@ -29,6 +29,7 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
 
+
 class TimeLineHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
@@ -62,7 +63,6 @@ class ExpandListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
 
-
 class QuoteHandler(webapp2.RequestHandler):
     def get(self):
         response = urllib2.urlopen("http://quotes.rest/qod.json")
@@ -80,11 +80,14 @@ class EmailHandler(webapp2.RequestHandler):
         self.response.out.write("example return!!")
 
 
+
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
   ('/quote', QuoteHandler),
+  ('/list', ListHandler),
   ('/home', TimeLineHandler),
-  ('/checked-list', ExpandListHandler)
+  ('/checked-list', ExpandListHandler),
+  ('/email', EmailHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
