@@ -4,6 +4,7 @@ import jinja2
 import os
 import logging
 import webapp2
+import urllib2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 
@@ -36,12 +37,15 @@ class LoginHandler(webapp2.RequestHandler):
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self):
-        quote = quotes.get("http://quotes.rest/quote.json")
-        print(quote.content)
+        response = urllib2.urlopen("http://quotes.rest/qod.json")
+        NowDict = json.loads(response.read())
+        Quote = NowDict["contents"]["quotes"][0]["quote"]
+        #Author = NowDict["contents"]["author"]
+        self.response.out.write(Quote)
 
 
 
-class EmailHandler(webapp2.RequestHandler):
+#class EmailHandler(webapp2.RequestHandler):
 
 
 
