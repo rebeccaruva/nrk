@@ -30,7 +30,9 @@ class TimeLineHandler(webapp2.RequestHandler):
 
 
 class AddEventHandler(webapp2.RequestHandler):
-
+    def get(self):
+        template = jinja_environment.get_template('addEvent.html')
+        self.response.out.write(template.render())
 
 class ExpandListHandler(webapp2.RequestHandler):
 
