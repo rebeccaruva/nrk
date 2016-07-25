@@ -4,12 +4,9 @@ import jinja2
 import os
 import logging
 import webapp2
-<<<<<<< HEAD
 import urllib2
-=======
 import schedule
 import time
->>>>>>> a3ef5901900d6f1f55603ec8b4b4573af9af4b23
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 
@@ -55,7 +52,6 @@ class TimeLineHandler(webapp2.RequestHandler):
 
 #class AddEventHandler(webapp2.RequestHandler):
 
-"""
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('addEvent.html')
@@ -64,12 +60,6 @@ class AddEventHandler(webapp2.RequestHandler):
 class ExpandListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
-#class ExpandListHandler(webapp2.RequestHandler):
-
-
-
-#class ListHandler(webapp2.RequestHandler):
-
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self):
@@ -79,23 +69,14 @@ class QuoteHandler(webapp2.RequestHandler):
         #Author = NowDict["contents"]["author"]
         self.response.out.write(Quote)
 
-
-
-#class EmailHandler(webapp2.RequestHandler):
-
 class ListHandler(webapp2.RequestHandler):
     def get (self):
-        self.response.out.write("example return!!")
-
-
-class QuoteHandler(webapp2.RequestHandler):
-    def get(self,template,quote):
         self.response.out.write("example return!!")
 
 class EmailHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
-"""
+
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
