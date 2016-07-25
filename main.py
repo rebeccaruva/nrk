@@ -29,23 +29,6 @@ class LoginHandler(webapp2.RequestHandler):
 
 class TimeLineHandler(webapp2.RequestHandler):
 
-    def job():
-        print("I'm working...")
-
-schedule.every(10).minutes.do(job)
-schedule.every().hour.do(job)
-schedule.every().day.at("10:30").do(job)
-schedule.every().monday.do(job)
-schedule.every().wednesday.at("13:15").do(job)
-
-    def get (self):
-        self.response.out.write("example return!!")
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-
-
 """
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
