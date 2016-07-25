@@ -4,7 +4,6 @@ import jinja2
 import os
 import logging
 import webapp2
-$ pip install schedule
 import schedule
 import time
 
@@ -26,9 +25,8 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write('<html><body>%s</body></html>' % greeting)
 
 class TimeLineHandler(webapp2.RequestHandler):
-
-def job():
-    print("I'm working...")
+    def job():
+        print("I'm working...")
 
 schedule.every(10).minutes.do(job)
 schedule.every().hour.do(job)
