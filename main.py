@@ -49,5 +49,7 @@ class EmailHandler(webapp2.RequestHandler):
 
 routes = [
   ('/', LoginHandler),
+  ('/home', TimeLineHandler),
+  ('/checked-list', ExpandListHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
