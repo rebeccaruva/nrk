@@ -1,4 +1,5 @@
 from google.appengine.api import users
+from google.appengine.ext import ndb
 import json
 import jinja2
 import os
@@ -56,6 +57,9 @@ class QuoteHandler(webapp2.RequestHandler):
 class ListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
+
+
+
 
 
 
