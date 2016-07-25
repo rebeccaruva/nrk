@@ -3,8 +3,9 @@ body {
   font-size: 36px;
 }
 
-h1 {
-  color: 'blue'
+html {
+  background-image: url("static/registerwelcome.jpg");
+  background-repeat: no-repeat;
 }
 
 

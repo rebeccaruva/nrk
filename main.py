@@ -34,8 +34,6 @@ class TimeLineHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('checked.html')
         self.response.write(template.render())
-        self.redirect("https://www.checklist-1383.appspot.com")
-
 
 #class AddEventHandler(webapp2.RequestHandler):
 
