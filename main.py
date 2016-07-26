@@ -25,7 +25,7 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
                 (user.nickname(), users.create_logout_url('/')))
         else:
-            greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>.' %
+            greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>' %
                 users.create_login_url('/home'))
         self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
 
@@ -35,6 +35,39 @@ class TimeLineHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('checked.html')
         self.response.write(template.render())
 
+<<<<<<< HEAD
+=======
+#class AddEventHandler(webapp2.RequestHandler):
+
+
+#     def job():
+#         print("I'm working...")
+#
+# schedule.every(10).minutes.do(job)
+# schedule.every().hour.do(job)
+# schedule.every().day.at("10:30").do(job)
+# schedule.every().monday.do(job)
+# schedule.every().wednesday.at("13:15").do(job)
+#
+#     def get (self):
+#         self.response.out.write("example return!!")
+#
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
+
+class GifHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('gif.html')
+        response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
+        giphyRand = json.loads(response.read())
+        gif = giphyRand["data"]["image_original_url"]
+        gifVariables = {
+            "gif": gif
+        }
+        self.response.out.write(template.render(gifVariables))
+
+>>>>>>> 322368e892a45127b685551058a89532ad6e9fb1
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('addEvent.html')
@@ -64,9 +97,6 @@ class EmailHandler(webapp2.RequestHandler):
 
 
 
-
-
-
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
@@ -75,6 +105,7 @@ routes = [
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
   ('/email', EmailHandler),
-  ('/add-event', AddEventHandler)
+  ('/add-event', AddEventHandler),
+  ('/gif', GifHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
