@@ -19,7 +19,7 @@ class LoginHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('login.html')
         self.response.out.write(template.render())
-
+'''
         user = users.get_current_user()
         if user:
             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
@@ -28,7 +28,7 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>' %
                 users.create_login_url('/home'))
         self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
-
+'''
 
 class TimeLineHandler(webapp2.RequestHandler):
     def get(self):

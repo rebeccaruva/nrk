@@ -1,12 +1,23 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 36px;
+  background-position: center;
 }
 
+<<<<<<< HEAD
+#signin {
+  top: 50%;
+=======
 html {
   background-image: url("static/background.jpg");
   background-repeat: no-repeat;
+>>>>>>> 322368e892a45127b685551058a89532ad6e9fb1
 }
 
+/*html {
+  background-image: url("/static/road.jpg");
+  background-repeat: no-repeat;
+}
+*/
 
   /*font-family: 'Raleway', sans-serif;*/
