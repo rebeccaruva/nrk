@@ -7,9 +7,16 @@
   </head>
   <body>
     <h2>Welcome to Checked {{user}}!</h2>
-  <div align=center>
-    <form method="post" action=post-message>
-      <textarea name = "text" cols=60, rows=5/></textarea>
+    <div align=center>
+      <form method="post" action=post-message>
+        <textarea name = "text" cols=60, rows=5/></textarea>
     <p><input type = "submit"></p>
+    <div id="_giphy_tv"></div>
+    <script>
+      var _giphy_tv_tag="celebration";
+      var g = document.createElement('script'); g.type = 'text/javascript'; g.async = true;
+      g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'giphy.com/static/js/widgets/tv.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(g, s);
+    </script>
   </body>
 </html>
