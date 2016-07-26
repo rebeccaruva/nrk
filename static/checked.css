@@ -1,9 +1,17 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 36px;
+<<<<<<< HEAD
   color: white;
+=======
+  background-position: center;
+>>>>>>> 3cd73ed8957cc150faf64e4c46d9228eafc1671a
 }
 
+<<<<<<< HEAD
+#signin {
+  top: 50%;
+=======
 html {
 <<<<<<< HEAD
 
@@ -14,5 +22,18 @@ html {
   background-image: url("static/background.jpg");
 >>>>>>> 322368e892a45127b685551058a89532ad6e9fb1
   background-repeat: no-repeat;
+<<<<<<< HEAD
   background-size: cover;
 }
+=======
+>>>>>>> 322368e892a45127b685551058a89532ad6e9fb1
+}
+
+/*html {
+  background-image: url("/static/road.jpg");
+  background-repeat: no-repeat;
+}
+*/
+
+  /*font-family: 'Raleway', sans-serif;*/
+>>>>>>> 3cd73ed8957cc150faf64e4c46d9228eafc1671a
