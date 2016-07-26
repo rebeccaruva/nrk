@@ -19,27 +19,13 @@ class LoginHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('login.html')
         self.response.out.write(template.render())
-<<<<<<< HEAD
-        user = users.get_current_user()
-        if user:
-            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
-                (user.nickname(), users.create_logout_url('/')))
-        else:
-            greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>' %
-                users.create_login_url('/home'))
-        self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
-#    def post(self):
-#        results_template = env.get_template('addEvent.html')
-=======
->>>>>>> 9374618a2112059ed328a37ad0c60292c344f29c
 
 
 class TimeLineHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('checked.html')
         self.response.write(template.render())
-
-
+"""
 class GifHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('gif.html')
@@ -50,7 +36,7 @@ class GifHandler(webapp2.RequestHandler):
             "gif": gif
         }
         self.response.out.write(template.render(gifVariables))
-
+"""
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('addEvent.html')
@@ -88,7 +74,6 @@ routes = [
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
   ('/email', EmailHandler),
-  ('/add-event', AddEventHandler),
-  ('/gif', GifHandler)
+  ('/add-event', AddEventHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
