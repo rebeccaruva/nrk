@@ -10,17 +10,11 @@
   </head>
   <body background="static/road.jpg">
 
-  </body>
 
 
 <center>
-<head>
-  <title>Checked.</title>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="static/checked.css"/>
-  <style type="text/css">a {text-decoration: none}</style>
-  <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
+
+
 
 
     <meta name="google-signin-scope" content="profile email">
@@ -28,9 +22,8 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
-  </head>
 
-  <body>
+
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
       function onSignIn(googleUser) {
@@ -43,17 +36,16 @@
         console.log('Family Name: ' + profile.getFamilyName());
         console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
-        window.location.replace("http://checkedcssiproject.appspot.com/home");
+        window.location.href ("http://checkedcssiproject.appspot.com/home");
 
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
       };
     </script>
+</center>
 
-
-<body background="static/road.jpg">
 
   </body>
-</center>
+
 </html>

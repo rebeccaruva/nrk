@@ -56,14 +56,14 @@ class GifHandler(webapp2.RequestHandler):
         }
         self.response.out.write(template.render(gifVariables))
 
-class AddEventHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('addEvent.html')
-        self.response.out.write(template.render())
+#class AddEventHandler(webapp2.RequestHandler):
+#    def get(self):
+#        template = jinja_environment.get_template('addEvent.html')
+#        self.response.out.write(template.render())
 
-class ExpandListHandler(webapp2.RequestHandler):
-    def get (self):
-        self.response.out.write("example return!!")
+#class ExpandListHandler(webapp2.RequestHandler):
+#    def get (self):
+#        self.response.out.write("example return!!")
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self):
@@ -75,13 +75,13 @@ class QuoteHandler(webapp2.RequestHandler):
         #Author = NowDict["contents"]["author"]
         self.response.out.write(Quote)
 
-class ListHandler(webapp2.RequestHandler):
-    def get (self):
-        self.response.out.write("example return!!")
+#class ListHandler(webapp2.RequestHandler):
+#    def get (self):
+#        self.response.out.write("example return!!")
 
-class EmailHandler(webapp2.RequestHandler):
-    def get (self):
-        self.response.out.write("example return!!")
+#class EmailHandler(webapp2.RequestHandler):
+#    def get (self):
+#        self.response.out.write("example return!!")
 
 
 
@@ -89,11 +89,11 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
   ('/home', QuoteHandler),
-  ('/list', ListHandler),
+#  ('/list', ListHandler),
   ('/home', TimeLineHandler),
-  ('/checked-list', ExpandListHandler),
-  ('/email', EmailHandler),
-  ('/add-event', AddEventHandler),
+#  ('/checked-list', ExpandListHandler),
+#  ('/email', EmailHandler),
+#  ('/add-event', AddEventHandler),
   ('/gif', GifHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
