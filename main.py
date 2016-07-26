@@ -19,6 +19,7 @@ class LoginHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('login.html')
         self.response.out.write(template.render())
+<<<<<<< HEAD
         user = users.get_current_user()
         if user:
             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
@@ -29,6 +30,8 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
 #    def post(self):
 #        results_template = env.get_template('addEvent.html')
+=======
+>>>>>>> 9374618a2112059ed328a37ad0c60292c344f29c
 
 
 class TimeLineHandler(webapp2.RequestHandler):
