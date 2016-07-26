@@ -1,11 +1,11 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 36px;
-  color: #400000;
+  color: blue;
 }
 
 html {
-  background-image: url("/static/darkgray.jpeg");
+  background-image: url("/static/Nessy.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
