@@ -25,9 +25,9 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
                 (user.nickname(), users.create_logout_url('/')))
         else:
-            greeting = ('<a href="%s">Register with your Gmail account</a>.' %
+            greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>.' %
                 users.create_login_url('/'))
-        self.response.out.write('<html><body>%s</body></html>' % greeting)
+        self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
 
 
 class TimeLineHandler(webapp2.RequestHandler):
