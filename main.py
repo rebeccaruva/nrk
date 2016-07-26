@@ -27,8 +27,8 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>' %
                 users.create_login_url('/home'))
         self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
-    def post(self):
-        results_template = env.get_template('addEvent.html')
+#    def post(self):
+#        results_template = env.get_template('addEvent.html')
 
 
 class TimeLineHandler(webapp2.RequestHandler):
