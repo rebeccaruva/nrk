@@ -25,7 +25,7 @@ class TimeLineHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('checked.html')
         self.response.write(template.render())
-"""
+
 class GifHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('gif.html')
@@ -36,7 +36,7 @@ class GifHandler(webapp2.RequestHandler):
             "gif": gif
         }
         self.response.out.write(template.render(gifVariables))
-"""
+
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('addEvent.html')
