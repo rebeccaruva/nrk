@@ -39,8 +39,10 @@ class GifHandler(webapp2.RequestHandler):
 
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('addEvent.html')
-        self.response.out.write(template.render())
+        main_template = env.get_template('checked.html')
+        self.response.out.write(main_template.render())
+    def post(self):
+        results_template = env.get_template('addEvent.html')
 
 class ExpandListHandler(webapp2.RequestHandler):
     def get (self):
@@ -74,6 +76,7 @@ routes = [
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
   ('/email', EmailHandler),
-  ('/add-event', AddEventHandler)
+  ('/add-event', AddEventHandler),
+  ('/gif', GifHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
