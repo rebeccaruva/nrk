@@ -6,7 +6,8 @@ import os
 import logging
 import webapp2
 import urllib2
-
+# import schedule
+import time
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 
@@ -27,13 +28,21 @@ class LoginHandler(webapp2.RequestHandler):
             greeting = ('<a href="%s"><center><h2>Gmail Login</h2></center></a>.' %
                 users.create_login_url('/home'))
         self.response.out.write('<html><body><center><h1>%s</h1></center></body></html>' % greeting)
-#    def post(self):
-#       checked_template = env.get_template('checked.html')
+
 
 class TimeLineHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('checked.html')
         self.response.write(template.render())
+
+class AddEventHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('addEvent.html')
+        self.response.out.write(template.render())
+
+class ExpandListHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
 class QuoteHandler(webapp2.RequestHandler):
     def get(self):
@@ -49,24 +58,23 @@ class ListHandler(webapp2.RequestHandler):
     def get (self):
         self.response.out.write("example return!!")
 
-class AddEventHandler(webapp2.RequestHandler):
-            def get(self):
-                template = jinja_environment.get_template('addEvent.html')
-                self.response.out.write(template.render())
+class EmailHandler(webapp2.RequestHandler):
+    def get (self):
+        self.response.out.write("example return!!")
 
-class ExpandListHandler(webapp2.RequestHandler):
-            def get (self):
-                self.response.out.write("example return!!")
+
+
 
 
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  ('/home', TimeLineHandler),
   ('/home', QuoteHandler),
-  ('/checked-list', ListHandler),
-  ('/event', AddEventHandler),
-  ('expand', ExpandListHandler)
+  ('/list', ListHandler),
+  ('/home', TimeLineHandler),
+  ('/checked-list', ExpandListHandler),
+  ('/email', EmailHandler),
+  ('/add-event', AddEventHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
