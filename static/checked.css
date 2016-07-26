@@ -4,14 +4,14 @@ body {
   background-position: center;
 }
 
-<<<<<<< HEAD
 #signin {
   top: 50%;
-=======
+}
+
+
 html {
-  background-image: url("static/background.jpg");
   background-repeat: no-repeat;
->>>>>>> 322368e892a45127b685551058a89532ad6e9fb1
+  background-position: center;
 }
 
 /*html {
