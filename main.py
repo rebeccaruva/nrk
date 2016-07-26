@@ -54,6 +54,16 @@ class TimeLineHandler(webapp2.RequestHandler):
 #     schedule.run_pending()
 #     time.sleep(1)
 
+class GifHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('gif.html')
+        response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration")
+        giphyRand = json.loads(response.read())
+        gif = giphyRand["data"]["image_original_url"]
+        gifVariables = {
+            'gif':self.request.get("gif")
+        }
+        self.response.write(template.render(gifVariables))
 
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
@@ -92,6 +102,7 @@ routes = [
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
   ('/email', EmailHandler),
-  ('/add-event', AddEventHandler)
+  ('/add-event', AddEventHandler),
+  ('/gif', GifHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
