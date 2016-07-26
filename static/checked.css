@@ -5,8 +5,12 @@ body {
 }
 
 html {
+<<<<<<< HEAD
   background-image: url("/static/Nessy.png");
   background-position: center;
+=======
+  background-image: url("/static/background.jpg");
+>>>>>>> feb98d9c65a8352aff2a0c5b718adc72ecb9fe19
   background-repeat: no-repeat;
   background-size: cover;
 }
