@@ -32,8 +32,14 @@ class GifHandler(webapp2.RequestHandler):
         response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
         giphyRand = json.loads(response.read())
         gif = giphyRand["data"]["image_original_url"]
+        width = giphyRand["data"]["image_width"]
+        width = int(width) + 20
+        height = giphyRand["data"]["image_height"]
+        height = int(height) + 45
         gifVariables = {
-            "gif": gif
+            "gif": gif,
+            "image_width": width,
+            "image_height": height
         }
         self.response.out.write(template.render(gifVariables))
 
