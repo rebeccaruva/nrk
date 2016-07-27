@@ -35,9 +35,20 @@ body {
   background-image: url("roadForest.jpg");
   background-attachment: fixed;
 }
+<<<<<<< HEAD
 h2 {
   font-size: 18px
 }
 #dialog {
   opacity: 20%;
+=======
+
+
+.g-signin2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+>>>>>>> 18b2460722c9cb3fc5ed7fa13e1bfb7fff375858
 }
