@@ -1,12 +1,10 @@
 body {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   background-position: center;
   color: white;
 }
 
-#signin {
-  top: 50%;
 html {
   background-repeat: no-repeat;
   background-position: center;

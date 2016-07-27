@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Checked.</title>
+    <title>Checked</title>
     <link rel="stylesheet" href="/static/checked.css"/>
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
@@ -15,10 +15,10 @@
     <h3><center><font color="white">Checked</font></center></h3>
     <h4><center><font color="white">An interactive website to help motivate your daily schedule</font></center></h4>
     <h5><center><font color="white">Presented to you by N.R.K.</font></center></h5>
-<!--
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="/static/checked.js"></script>
-
+<!--
     <div id="example5.3" style="height: 150px;"></div>
 
 
@@ -33,7 +33,23 @@
 </center>
 
 
+<!--
+<script>
+function UserInput(){
+  var textbox = document.getElementById('textbox')
 
+  if(textbox==false){
+    alert("is this working?")
+    return false
+  else{
+    return true;
+  }
+  }
+
+}
+</script>
+
+-->
 
 
 
@@ -48,7 +64,7 @@
 </form>
 <form action="action_page.php" method="post">
   Enter Event:<br>
-  <input type="text" name="event" value=""><br>
+  <input type="text" name="event" id="textbox" value=""><br>
   <input type="submit" value="Submit">
   <input type="reset" value="Reset">
 </form>
@@ -121,6 +137,14 @@
     </span>
   </li>
 </ol>
+
+
+
+
+
+
+
+
 
   </body>
 
