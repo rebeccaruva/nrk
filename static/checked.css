@@ -35,8 +35,28 @@ body {
   background-image: url("roadForest.jpg");
   background-attachment: fixed;
 }
-
-
+.loginName {
+  /*height: 4em;
+  padding-top: 2px;
+  padding-bottom: .5em;*/
+  background-color: rgba(0,0,0, .55);
+  /*margin-top: 1em;
+  width: 9em;
+  border-radius: 55px;*/
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;
+}
+.ontop {
+  text-shadow: 3px 3px black;
+}
 .g-signin2 {
     position: absolute;
     top: 50%;
