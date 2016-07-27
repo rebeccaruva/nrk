@@ -26,25 +26,6 @@ class TimeLineHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('checked.html')
         self.response.write(template.render())
 
-#class AddEventHandler(webapp2.RequestHandler):
-
-
-#     def job():
-#         print("I'm working...")
-#
-# schedule.every(10).minutes.do(job)
-# schedule.every().hour.do(job)
-# schedule.every().day.at("10:30").do(job)
-# schedule.every().monday.do(job)
-# schedule.every().wednesday.at("13:15").do(job)
-#
-#     def get (self):
-#         self.response.out.write("example return!!")
-#
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
-
 class GifHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('gif.html')
@@ -60,6 +41,12 @@ class GifHandler(webapp2.RequestHandler):
 #    def get(self):
 #        template = jinja_environment.get_template('addEvent.html')
 #        self.response.out.write(template.render())
+class AddEventHandler(webapp2.RequestHandler):
+    def get(self):
+        main_template = env.get_template('checked.html')
+        self.response.out.write(main_template.render())
+    def post(self):
+        results_template = env.get_template('addEvent.html')
 
 #class ExpandListHandler(webapp2.RequestHandler):
 #    def get (self):
@@ -69,11 +56,12 @@ class QuoteHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('checked.html')
         self.response.out.write(template.render())
-        response = urllib2.urlopen("http://quotes.rest/qod.json")
+        '''response = urllib2.urlopen("http://quotes.rest/qod.json")
         NowDict = json.loads(response.read())
         Quote = NowDict["contents"]["quotes"][0]["quote"]
         #Author = NowDict["contents"]["author"]
-        self.response.out.write(Quote)
+        self.response.out.write(Quote)'''
+        self.response.out.write("hello world")
 
 #class ListHandler(webapp2.RequestHandler):
 #    def get (self):
