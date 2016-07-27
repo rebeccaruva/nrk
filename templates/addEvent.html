@@ -1,23 +1,17 @@
 <DOCTYPE! html>
 <html>
   <head>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="static/checked.css"/>
-=======
-    <form method="post" action ="">
-       <h3>Enter an event list or goal: <input type="text" name="main"/></h3>
-    <br>
-      <p><input type="submit" value="Submit">
-        <input type="reset" value="Reset"></p>
-    </br>
-</form>
->>>>>>> 3e5be6b48e208b263bb2545c7c3204c66c1e7a2d
-  </head>
-  <body>
-    <h3>Welcome to the list page!<h3>
-      <p>When you enter the event of your choosing, it will be stored in
-        this database.</p>
-      <ul>
-        <li>
+    <title>Checked Goals</title>
+  <body background= "/static/background.jpg">
+    <ul>
+      <li>
+        <h1>Your current goal for the day is: {{main}}.</h1>
+      </li>
+      <li>
+        <h1>When you have finished "{{main}}", you may check off in
+          the check box.</h1>
+      </li>
+    </ul>
+  </body>
+</head>
+</html>

@@ -37,16 +37,16 @@ class GifHandler(webapp2.RequestHandler):
         }
         self.response.out.write(template.render(gifVariables))
 
-#class AddEventHandler(webapp2.RequestHandler):
-#    def get(self):
-#        main_template = env.get_template('checked.html')
-#        self.response.out.write(main_template.render())
-#    def post(self):
-#        results_template = env.get_template('addEvent.html')
-class AddEventHandler(ndb.Model):
-  name = ndb.StringProperty(required=True)
-  activity = ndb.StringProperty(required=True)
-  goal = ndb.DateProperty(required=True)
+class AddEventHandler(webapp2.RequestHandler):
+    def get(self):
+        checked_template = jinja_env.get_template('checked.html')
+        self.response.out.write(checked_template.render())
+    def post(self):
+        addEvent_template = jinja_env.get_template('addEvent.html')
+        template_variables = {
+            'main':self.request.get("main")
+            }
+        self.response.out.write(addEvent_template.render(template_variables))
 
 #class ExpandListHandler(webapp2.RequestHandler):
 #    def get (self):
@@ -78,13 +78,7 @@ routes = [
   ('/', LoginHandler),
   ('/home', QuoteHandler),
   ('/home', TimeLineHandler),
-  ('/checked-list', ExpandListHandler),
-  ('/add-event', AddEventHandler),
-#  ('/list', ListHandler),
-  ('/home', TimeLineHandler),
-#  ('/checked-list', ExpandListHandler),
-#  ('/email', EmailHandler),
-#  ('/add-event', AddEventHandler),
+  ('/addEvent', AddEventHandler),
   ('/gif', GifHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
