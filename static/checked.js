@@ -29,3 +29,20 @@ function drawChart() {
   chart.draw(dataTable, options);
 }
 */
+
+
+/*
+$("#details").one("mouseover", function() {
+  $("#details").addClass('hover');
+});
+
+*/
+
+
+function Clicked() {
+  $(".details").onclick().show();
+  }
+}
+
+
+$(document).ready(begin);
