@@ -3,9 +3,9 @@ body {
   font-size: 62.5%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("roadForest.jpg");
+  background-image: url("forest.jpg");
   background-attachment: fixed;
 }
 #dialog {
-  background-color: transparent;
+  opacity: 20%;
 }
