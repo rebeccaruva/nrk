@@ -66,9 +66,8 @@ class QuoteHandler(webapp2.RequestHandler):
         #NowDict = json.loads(response.read())
         #Quote = NowDict["contents"]["quotes"][0]["quote"]
         #Author = NowDict["contents"]["quotes"][0]["author"]
-        #self.response.out.write(' " ' + Quote + ' " ')
-        self.response.out.write("<html><center><font color=white>stuff here</font></center></html>")
-
+        #self.response.out.write(' " ' + Quote + ' " ' "<br>" + "-" + Author)
+        self.response.out.write("<html><center>Quote</center></html>")
 
 
 #class ListHandler(webapp2.RequestHandler):
