@@ -58,24 +58,13 @@ class QuoteHandler(webapp2.RequestHandler):
         #Author = NowDict["contents"]["author"]
         self.response.out.write(Quote)
 
-class ListHandler(webapp2.RequestHandler):
-    def get (self):
-        self.response.out.write("example return!!")
-
-class EmailHandler(webapp2.RequestHandler):
-    def get (self):
-        self.response.out.write("example return!!")
-
-
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
   ('/home', QuoteHandler),
-  ('/list', ListHandler),
   ('/home', TimeLineHandler),
   ('/checked-list', ExpandListHandler),
-  ('/email', EmailHandler),
   ('/add-event', AddEventHandler),
   ('/gif', GifHandler)
 ]
