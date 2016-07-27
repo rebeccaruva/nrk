@@ -94,6 +94,11 @@ class QuoteHandler(webapp2.RequestHandler):
 #    def get (self):
 #        self.response.out.write("example return!!")
 
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('about.html')
+        self.response.out.write(template.render())
+
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
@@ -103,6 +108,7 @@ routes = [
 #  ('/checked-list', ExpandListHandler),
 #  ('/add-event', AddEventHandler),
   ('/addEvent', AddEventHandler),
-  ('/gif', GifHandler)
+  ('/gif', GifHandler),
+  ('/about', AboutHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
