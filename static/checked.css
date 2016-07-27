@@ -1,15 +1,23 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
-  background-position: center;
+  color: white;
 }
 
 #signin {
   top: 50%;
-html {
-  background-repeat: no-repeat;
-
-  background-position: center;
 }
 
+#home {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("forest.jpg");
+  background-attachment: fixed;
+}
+
+#login {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("roadForest.jpg");
+  background-attachment: fixed;
 }

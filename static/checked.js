@@ -1,3 +1,5 @@
+/*
+
 google.charts.load("current", {packages:["timeline"]});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
@@ -26,3 +28,4 @@ function drawChart() {
 
   chart.draw(dataTable, options);
 }
+*/
