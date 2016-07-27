@@ -3,7 +3,21 @@ body {
   font-size: 24px;
   color: white;
 }
-
+#name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 65px;
+  color: white;
+}
+#description {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 32px;
+  color: white;
+}
+#poweredby {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px;
+  color: white;
+}
 #signin {
   top: 50%;
 }
