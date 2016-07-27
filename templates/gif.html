@@ -1,14 +1,45 @@
-<DOCTYPE! html>
+<!-- <DOCTYPE! html>
 <html>
   <head>
     <title>Gif Check</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="static/checked.css"/>
+    <link rel="stylesheet" href="static/gifAlert.css"/>
   </head>
   <body>
     <center>
       <img src="{{gif}}" alt="celebration!">
     </center>
+  </body>
+</html> -->
+
+<DOCTYPE! html>
+<html lang="en">
+  <head>
+    <title>Gif Check</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="static/gifAlert.css"/>
+
+      <script>
+      $(function() {
+        $( "#dialog" ).dialog();
+      });
+      </script>
+  </head>
+  <body>
+
+    <div id="dialog" title="YOU CHECKED IT!">
+      <center>
+      <img src="{{gif}}" alt="celebration!"/>
+      </center>
+
+    </div>
+
+
   </body>
 </html>
