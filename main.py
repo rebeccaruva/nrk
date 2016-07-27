@@ -83,7 +83,7 @@ class QuoteHandler(webapp2.RequestHandler):
         #Quote = NowDict["contents"]["quotes"][0]["quote"]
         #Author = NowDict["contents"]["quotes"][0]["author"]
         #self.response.out.write(' " ' + Quote + ' " ' "<br>" + "-" + Author)
-        self.response.out.write("<html><center>Quote</center></html>")
+        self.response.out.write("<html><center>Quote Here</center></html>")
 
 
 #class ListHandler(webapp2.RequestHandler):

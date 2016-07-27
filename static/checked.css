@@ -1,15 +1,39 @@
 body {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 30px;
-  background-position: center;
+  font-size: 24px;
+  color: white;
+}
+#name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 65px;
+  color: white;
+}
+#description {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 32px;
+  color: white;
+}
+#poweredby {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px;
+  color: white;
+}
+#signin {
+  top: 50%;
 }
 
-
-html {
+#home {
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("forest.jpg");
+  background-attachment: fixed;
 }
 
+#login {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("roadForest.jpg");
+  background-attachment: fixed;
 }
 
 

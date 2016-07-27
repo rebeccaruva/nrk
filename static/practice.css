@@ -107,4 +107,8 @@ li:hover::before {
 li:hover .details {
 	display: block;
   color: #444;
+  position: absolute;
+  width: 150px;
+  left: -135px;
+  display: inline-block;
 }
