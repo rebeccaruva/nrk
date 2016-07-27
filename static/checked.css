@@ -21,3 +21,9 @@ body {
   background-image: url("roadForest.jpg");
   background-attachment: fixed;
 }
+h2 {
+  font-size: 18px
+}
+#dialog {
+  opacity: 20%;
+}
