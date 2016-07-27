@@ -8,14 +8,9 @@
     <style type="text/css">a {text-decoration: none}</style>
     <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
   </head>
-    <body background="/static/road.jpg">
 
-
-
-<center>
-
-
-<center>
+  <body id="login">
+  <center>
 
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="146252904000-534tcop89g45077l8td7sjbc9omdrp87.apps.googleusercontent.com">
@@ -26,7 +21,6 @@
 
     <script>
       function onSignIn(googleUser) {
-
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
         console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -39,10 +33,8 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
         window.location.replace("http://checkedcssiproject.appspot.com/home");
-
       };
     </script>
-</center>
 
 
   </body>
