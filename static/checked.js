@@ -37,12 +37,3 @@ $("#details").one("mouseover", function() {
 });
 
 */
-
-
-function Clicked() {
-  $(".details").onclick().show();
-  }
-}
-
-
-$(document).ready(begin);
