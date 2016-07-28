@@ -39,11 +39,11 @@
           autoOpen: false,
           show: {
             effect: "blind",
-            duration: 1000
+            duration: 100
           },
           hide: {
             effect: "explode",
-            duration: 1000
+            duration: 100
           }
         });
         $( "#opener" ).on( "click", function() {
@@ -55,15 +55,15 @@
   <body id="home">
     <ul>
       <li>
-        <h1>Your current goal for the hour is: {{main}}.</h1>
+        <h1><font color="orange">Your current goal for the hour is: {{main}}.</font></h1>
       </li>
       <li>
-        <h1>When you have finished your goal, comeback to this page
-          and you may check off in the checkbox!</h1>
+        <h1><font color= "orange">When you have finished your goal, comeback to this page
+          and you may check off in the checkbox!</font></h1>
       </li>
     </ul>
     <h2><input type="checkbox" name="fun" value="turned up!">
-      Check the box and hit celebrate when you have finished your goal!<br>
+      <font color="orange">Check the box and hit celebrate when you have finished your goal!</font><br>
 
     <div id="dialog" title="YOU CHECKED IT!">
       <center>
@@ -72,5 +72,12 @@
     </div>
 
     <button id="opener" type="submit" value="Submit">Celebrate!</button>
+    <button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
   </body>
 </html>
