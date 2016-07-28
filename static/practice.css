@@ -229,7 +229,7 @@ input {
 body {
   margin: 0;
   padding: 0;
-  background: rgb(230,230,230);
+  background-image: url(background.jpg);
 
   color: rgb(50,50,50);
   font-family: 'Open Sans', sans-serif;
@@ -246,6 +246,7 @@ body {
   margin-top: 20px;
   padding: 1em 0;
   list-style-type: none;
+
 }
 
 .timeline:before {
@@ -269,6 +270,7 @@ body {
 
 .timeline li {
   padding: 1em 0;
+  
 }
 
 .timeline li:after {
