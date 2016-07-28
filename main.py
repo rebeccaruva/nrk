@@ -1,11 +1,11 @@
 from google.appengine.api import users
-from google.appengine.ext import ndb
 import json
 import jinja2
 import os
 import logging
 import webapp2
 import urllib2
+from checked import Employee
 # import schedule
 import time
 
@@ -48,6 +48,7 @@ class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         checked_template = jinja_env.get_template('checked.html')
         self.response.out.write(checked_template.render())
+        #checked_template.put()
     def post(self):
         addEvent_template = jinja_env.get_template('addEvent.html')
         # template_variables = {
@@ -74,21 +75,31 @@ class AddEventHandler(webapp2.RequestHandler):
 #    def get (self):
 #        self.response.out.write("example return!!")
 
-# class QuoteHandler(webapp2.RequestHandler):
-#     def get(self):
-#         template = jinja_environment.get_template('checked.html')
-#         self.response.out.write(template.render())
-#         response = urllib2.urlopen("http://quotes.rest/qod.json")
-#         NowDict = json.loads(response.read())
-#         Quote = NowDict["contents"]["quotes"][0]["quote"]
-#         Author = NowDict["contents"]["quotes"][0]["author"]
-#         self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
+
+class QuoteHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('checked.html')
+        self.response.out.write(template.render())
+        response = urllib2.urlopen("http://quotes.rest/qod.json")
+        NowDict = json.loads(response.read())
+        Quote = NowDict["contents"]["quotes"][0]["quote"]
+        Author = NowDict["contents"]["quotes"][0]["author"]
+        self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
         #self.response.out.write("<html><center>Quote Here</center></html>")
 
 
-#class ListHandler(webapp2.RequestHandler):
-#    def get (self):
-#        self.response.out.write("example return!!")
+#class CheckedHandler(webapp2.RequestHandler):
+#    def post(self):
+#        s = Employee(name="Nick Florez", goal="finish project")
+#        print s.goal
+#        s.put()
+
+#        message = "<ul><li>%s, %s</li></ul>" % (name, goal)
+#        self.response.write("<h2>Students:</h2>")
+#        self.response.write(message)
+#        key = student.put()
+#        key.get().name
+
 
 #class EmailHandler(webapp2.RequestHandler):
 #    def get (self):
@@ -108,7 +119,12 @@ routes = [
 #  ('/checked-list', ExpandListHandler),
 #  ('/add-event', AddEventHandler),
   ('/addEvent', AddEventHandler),
+<<<<<<< HEAD
   ('/gif', GifHandler),
   ('/about', AboutHandler)
+=======
+  ('/gif', GifHandler)
+ # ('/checked', CheckedHandler)
+>>>>>>> 440353dfcd623ab63a5c1a841e349394cdc7d6dd
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
