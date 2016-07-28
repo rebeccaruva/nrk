@@ -1,21 +1,15 @@
 <DOCTYPE! html>
 <html>
-
-
-
   <head>
-
-
     <title>Checked.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/checked.css"/>
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
-    <style type="text/css">a {text-decoration: none}</style>
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/static/checked.css"/>
+      <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+      <style type="text/css">a {text-decoration: none}</style>
+      <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
   </head>
   <body id="home">
-    <br />
     <br />
     <center>
     <h1 id="name"><center><font color="white">Checked.</font></center></h1>
@@ -223,27 +217,25 @@
 </li>
 </ul>
 
+<form action="/" class="inline">
+  <div id="wrapperDiv">
+    <div id="printButton">
+      <button id="print"><a href="javascript:window.print()"><font color="white">Print List</button></font></a>
+    </div>
+    <div id="signOutButton">
+      <a href="#" onclick="signOut();"><button class="signOut">Sign Out</button></a>
+      <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+        }
+      </script>
+    </div>
+  </div>
+</form>
 
-<div id="button">
-  <a href="#" onclick="signOut();"><button class="signOut"><img
-    src="static/googleG.png" width=19px height=19px alt="Google Logo"/>
-    &nbsp  &nbsp Sign Out</button></a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
-
-
-<br />
-</div>
 
 </body>
-<div class = "print">
-  <a href="javascript:window.print()">
-    <span>Print List</span>
-  </a>
 </html>
