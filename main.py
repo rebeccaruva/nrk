@@ -114,7 +114,7 @@ class AboutHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  ('/home', QuoteHandler),
+  # ('/home', QuoteHandler),
   ('/home', TimeLineHandler),
 #  ('/checked-list', ExpandListHandler),
 #  ('/add-event', AddEventHandler),
