@@ -76,7 +76,7 @@ class AddEventHandler(webapp2.RequestHandler):
 #        self.response.out.write("example return!!")
 
 
-<<<<<<< HEAD
+
 #class QuoteHandler(webapp2.RequestHandler):
 #    def get(self):
 #        template = jinja_environment.get_template('checked.html')
@@ -86,7 +86,6 @@ class AddEventHandler(webapp2.RequestHandler):
         #Quote = NowDict["contents"]["quotes"][0]["quote"]
         #Author = NowDict["contents"]["quotes"][0]["author"]
         #self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
-=======
 # class QuoteHandler(webapp2.RequestHandler):
 #     def get(self):
 #         template = jinja_environment.get_template('checked.html')
@@ -96,7 +95,6 @@ class AddEventHandler(webapp2.RequestHandler):
 #         Quote = NowDict["contents"]["quotes"][0]["quote"]
 #         Author = NowDict["contents"]["quotes"][0]["author"]
 #         self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
->>>>>>> 9d2d30b30b7140d663e76cdd820f8961d5c36d2a
         #self.response.out.write("<html><center>Quote Here</center></html>")
 
 
@@ -126,11 +124,8 @@ class AboutHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-<<<<<<< HEAD
   #('/home', QuoteHandler),
-=======
   # ('/home', QuoteHandler),
->>>>>>> 9d2d30b30b7140d663e76cdd820f8961d5c36d2a
   ('/home', TimeLineHandler),
 #  ('/checked-list', ExpandListHandler),
 #  ('/add-event', AddEventHandler),
