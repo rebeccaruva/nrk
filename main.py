@@ -45,42 +45,7 @@ class GifHandler(webapp2.RequestHandler):
         }
         self.response.out.write(template.render(gifVariables))
 
-class AddEventHandler(webapp2.RequestHandler):
-    def get(self):
-        checked_template = jinja_env.get_template('checked.html')
-        self.response.out.write(checked_template.render())
-        #checked_template.put()
-    def post(self):
-        addEvent_template = jinja_env.get_template('addEvent.html')
-        # template_variables = {
-        #     'main':self.request.get("main")
-        #     }
-        # self.response.out.write(addEvent_template.render(template_variables))
-        # template = jinja_environment.get_template('gif.html')
-        response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
-        giphyRand = json.loads(response.read())
-        gif = giphyRand["data"]["image_original_url"]
-        width = giphyRand["data"]["image_width"]
-        width_image = int(width) + 30
-        height = giphyRand["data"]["image_height"]
-        height_image= int(height) + 70
-        templateVariables = {
-            'main':self.request.get("main"),
-            "gif": gif,
-            "image_width": width_image,
-            "image_height": height_image
-        }
-        self.response.out.write(addEvent_template.render(templateVariables))
 
-#class ExpandListHandler(webapp2.RequestHandler):
-#    def get (self):
-#        self.response.out.write("example return!!")
-
-
-class QuoteHandler(webapp2.RequestHandler):
-     def get(self):
-        template = jinja_environment.get_template('checked.html')
-        self.response.out.write(template.render())
 
 class QuoteHandler(webapp2.RequestHandler):
      def get(self):
@@ -90,26 +55,10 @@ class QuoteHandler(webapp2.RequestHandler):
 #         NowDict = json.loads(response.read())
 #         Quote = NowDict["contents"]["quotes"][0]["quote"]
 #         Author = NowDict["contents"]["quotes"][0]["author"]
-#         self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
+#         self.response.out.write("<center>" + "<font color=white> + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</font>" + "</center>")
          self.response.out.write("<html><center>Quote Here</center></html>")
 
 
-#class CheckedHandler(webapp2.RequestHandler):
-#    def post(self):
-#        s = Employee(name="Nick Florez", goal="finish project")
-#        print s.goal
-#        s.put()
-
-#        message = "<ul><li>%s, %s</li></ul>" % (name, goal)
-#        self.response.write("<h2>Students:</h2>")
-#        self.response.write(message)
-#        key = student.put()
-#        key.get().name
-
-
-#class EmailHandler(webapp2.RequestHandler):
-#    def get (self):
-#        self.response.out.write("example return!!")
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
@@ -120,12 +69,9 @@ class AboutHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  # ('/home', QuoteHandler),
+  ('/home', QuoteHandler),
   ('/home', TimeLineHandler),
-#  ('/checked-list', ExpandListHandler),
-  ('/addEvent', AddEventHandler),
-  ('/gif', GifHandler),
+  ('/home', GifHandler),
   ('/about', AboutHandler)
- # ('/checked', CheckedHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)

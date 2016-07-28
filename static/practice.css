@@ -270,7 +270,7 @@ body {
 
 .timeline li {
   padding: 1em 0;
-  
+
 }
 
 .timeline li:after {
@@ -546,4 +546,37 @@ body {
 	margin: 1em 4em 0 4em;
 }
 
+}
+
+
+
+
+
+
+
+/***** Print Button *****/
+
+.print { margin: 10px 5px; }
+.print a {
+  text-decoration: none;
+  color: black;
+}
+
+.print:before {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: FontAwesome;
+  font-size: 22px;
+
+  content: "\f02f";
+  letter-spacing: 5px;
+}
+
+
+/***** Print Stylesheet *****/
+
+@media print {
+  .add, .print { display: none; }
+  li .icon-remove { display: none !important; }
 }
