@@ -72,11 +72,6 @@ class AddEventHandler(webapp2.RequestHandler):
         }
         self.response.out.write(addEvent_template.render(templateVariables))
 
-#class ExpandListHandler(webapp2.RequestHandler):
-#    def get (self):
-#        self.response.out.write("example return!!")
-
-
 class QuoteHandler(webapp2.RequestHandler):
      def get(self):
         template = jinja_environment.get_template('checked.html')
@@ -94,23 +89,6 @@ class QuoteHandler(webapp2.RequestHandler):
          self.response.out.write("<html><center>Quote Here</center></html>")
 
 
-#class CheckedHandler(webapp2.RequestHandler):
-#    def post(self):
-#        s = Employee(name="Nick Florez", goal="finish project")
-#        print s.goal
-#        s.put()
-
-#        message = "<ul><li>%s, %s</li></ul>" % (name, goal)
-#        self.response.write("<h2>Students:</h2>")
-#        self.response.write(message)
-#        key = student.put()
-#        key.get().name
-
-
-#class EmailHandler(webapp2.RequestHandler):
-#    def get (self):
-#        self.response.out.write("example return!!")
-
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('about.html')
@@ -122,10 +100,8 @@ routes = [
   ('/', LoginHandler),
   # ('/home', QuoteHandler),
   ('/home', TimeLineHandler),
-#  ('/checked-list', ExpandListHandler),
-  ('/addEvent', AddEventHandler),
-  ('/gif', GifHandler),
+ # ('/addEvent', AddEventHandler),
+  ('/home', GifHandler),
   ('/about', AboutHandler)
- # ('/checked', CheckedHandler)
 ]
 app = webapp2.WSGIApplication(routes, debug=True)

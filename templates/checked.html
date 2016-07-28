@@ -1,11 +1,6 @@
 <DOCTYPE! html>
-<html>
-
-
-
+<html lang ="en">
   <head>
-
-
     <title>Checked.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/checked.css"/>
@@ -13,7 +8,61 @@
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
     <style type="text/css">a {text-decoration: none}</style>
     <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/static/gifAlert.css"/>
+
+    <script>
+    $( function() {
+      $( "#dialog" ).dialog({
+        width: {{image_width}},
+        height: {{image_height}},
+        autoOpen: false,
+        show: {
+          effect: "blind",
+          duration: 1000
+        },
+        hide: {
+          effect: "explode",
+          duration: 1000
+        }
+      });
+      $("#opener").click(function() {
+        $("#dialog").dialog("open");
+      });
+    } );
+    </script>
   </head>
+  <body id="home">
+    <!-- <ul>
+      <li>
+        <h1>Your current goal for the hour is: {{main}}.</h1>
+      </li>
+      <li>
+        <h1>When you have finished your goal, comeback to this page
+          and you may check off in the checkbox!</h1>
+      </li>
+    </ul>
+    <h3><input type="checkbox" name="fun" value="turned up!">
+      Check the box and hit submit when you have finished your goal!<br> -->
+
+    <div id="dialog" title="YOU CHECKED IT!">
+      <img src="{{gif}}" alt="celebration!"/>
+    </div>
+
+    <button id="opener">Celebrate!</button>
+  </body>
+  </head>
+
   <body id="home">
     <br />
     <br />
@@ -29,183 +78,13 @@
       <div class="slider round"></div>
     </label>
 -->
-
-
-    </center>
-<<<<<<< HEAD
-<!--<link rel="stylesheet" href="/static/practice.css">
-  <ol>
-  <div class="trial">
-  <li>
-    12am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-    <div class="trial">
-    <li>
-    1am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-    <div class="trial">
-    <li>
-    2am/pm
-      <span class="details">
-        <form action="addEvent"= method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-    <div class="trial">
-    <li>
-    3am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-    <div class="trial">
-    <li>
-    4am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-    <div class="trial">
-    <li>
-    5am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-    <div class="trial">
-    <li>
-    6am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-  <div class="trial">
-    <li>
-    7am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-  <div class="trial">
-    <li>
-    8am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-  <div class="trial">
-    <li>
-    9am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-  <div class="trial">
-    <li>
-    10am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-  <div class="trial">
-    <li>
-    11am/pm
-      <span class="details">
-        <form action="addEvent" method="post">
-          <h3>Enter a goal for the hour:</h3><br>
-          <input type="text" name="main" value=""><br>
-          <input type="submit" value="Submit">
-          <input type="reset" value="Reset">
-        </form>
-      </span>
-    </li>
-  </div>
-</ol>-->
-=======
->>>>>>> c4ae9237f657510d82b99afc8f702cfc79184fe7
-
-<link rel="stylesheet" href="static/practice.css">
-<script type="text/javascript" src="static/practice.js"></script>
-
-
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  </center>
+    <link rel="stylesheet" href="static/practice.css">
+    <script type="text/javascript" src="static/practice.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- The Timeline -->
-
 <ul class="timeline">
-
 	<!-- Item 1 -->
 	<li>
 		<div class="direction-r">
@@ -214,7 +93,6 @@
 				<span class="time-wrapper"><span class="time"></span></span>
 			</div>
 
-
       <div class="desc"><div id="myDIV" class="header">
         <h2>Enter goal(s) for the day</h2>
         <input type="text" id="Sunday" placeholder="Title...">
@@ -222,7 +100,6 @@
       </div>
 
       <ul id="sunday">
-        <li>watt</li>
       </ul></div>
 		</div>
 
@@ -247,7 +124,6 @@
       </div>
 
       <ul id="monday">
-        <li>watt</li>
       </ul></div>
 		</div>
 
@@ -272,7 +148,6 @@
       </div>
 
       <ul id="tuesday">
-        <li> help me </li>
       </ul></div>
 		</div>
 
@@ -302,14 +177,8 @@
 
     </ul></div>
   </div>
-
-
 </li>
-
-
 </ul>
-
-
 
 <!-- Item 5 -->
 <ul class="timeline">
@@ -383,8 +252,6 @@
 
     </ul></div>
   </div>
-
-
 </li>
 </ul>
 
@@ -401,13 +268,9 @@
     });
   }
 </script>
-<<<<<<< HEAD
-
-
 <br />
-=======
+
 </div>
->>>>>>> 23cec35f632f64545fa0ecdf186de6686a623848
 
 </body>
 </html>
