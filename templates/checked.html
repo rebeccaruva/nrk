@@ -7,7 +7,7 @@
 
 
     <title>Checked.</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/checked.css"/>
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
@@ -15,12 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
   </head>
   <body id="home">
+    <br />
+    <br />
     <center>
     <h1 id="name"><center><font color="white">Checked.</font></center></h1>
+    <br />
     <h4 id="description"><center><font color="white">An interactive website to help motivate your daily schedule</font></center></h4>
     <h5 id="poweredby"><center><font color="white">Presented to you by <a href="https://www.checkedcssiproject.appspot.com/about"><font color="white">N.R.K.</font></a></font></center></h5>
-    <br />
-
 
 <!--
     <label class="switch">
@@ -218,6 +219,19 @@
 
 </li>
 </ul>
+
+
+  <a href="#" onclick="signOut();"><button class="signOut"><img src="static/googleG.png" width=19px height=19px alt="Google Logo"/> &nbsp  &nbsp Sign Out</button></a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
+<br />
 
 </body>
 </html>
