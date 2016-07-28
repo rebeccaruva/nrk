@@ -34,13 +34,14 @@ class GifHandler(webapp2.RequestHandler):
         giphyRand = json.loads(response.read())
         gif = giphyRand["data"]["image_original_url"]
         width = giphyRand["data"]["image_width"]
-        width = int(width) + 20
+        width_image = int(width) + 30
         height = giphyRand["data"]["image_height"]
-        height = int(height) + 45
+        height_image= int(height) + 70
         gifVariables = {
+            'main':self.request.get("main"),
             "gif": gif,
-            "image_width": width,
-            "image_height": height
+            "image_width": width_image,
+            "image_height": height_image
         }
         self.response.out.write(template.render(gifVariables))
 
@@ -60,14 +61,14 @@ class AddEventHandler(webapp2.RequestHandler):
         giphyRand = json.loads(response.read())
         gif = giphyRand["data"]["image_original_url"]
         width = giphyRand["data"]["image_width"]
-        width = int(width) + 20
+        width_image = int(width) + 30
         height = giphyRand["data"]["image_height"]
-        height = int(height) + 45
+        height_image= int(height) + 70
         templateVariables = {
             'main':self.request.get("main"),
             "gif": gif,
-            "image_width": width,
-            "image_height": height
+            "image_width": width_image,
+            "image_height": height_image
         }
         self.response.out.write(addEvent_template.render(templateVariables))
 
@@ -117,7 +118,6 @@ routes = [
   # ('/home', QuoteHandler),
   ('/home', TimeLineHandler),
 #  ('/checked-list', ExpandListHandler),
-#  ('/add-event', AddEventHandler),
   ('/addEvent', AddEventHandler),
   ('/gif', GifHandler),
   ('/about', AboutHandler)

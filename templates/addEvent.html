@@ -18,19 +18,18 @@
 <DOCTYPE! html>
 <html lang="en">
   <head>
+    <title>Add Event</title>
+    <link rel="stylesheet" href="static/gifAlert.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gif Check</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="static/gifAlert.css"/>
   <!--  <script src = "checked.css"></script>-->
       <script>
       $( function() {
@@ -40,15 +39,15 @@
           autoOpen: false,
           show: {
             effect: "blind",
-            duration: 100
+            duration: 1000
           },
           hide: {
             effect: "explode",
-            duration: 100
+            duration: 1000
           }
         });
-        $( "#opener" ).on( "click", function() {
-          $( "#dialog" ).dialog( "open" );
+        $("#opener").click(function() {
+          $("#dialog").dialog("open");
         });
       } );
       </script>
@@ -67,9 +66,7 @@
       <font color="orange">Check the box and hit celebrate when you have finished your goal!</font><br>
 
     <div id="dialog" title="YOU CHECKED IT!">
-      <center>
       <img src="{{gif}}" alt="celebration!"/>
-      </center>
     </div>
 
     <button id="opener" type="submit" value="Submit">Celebrate!</button>
