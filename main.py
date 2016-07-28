@@ -74,7 +74,6 @@ class AddEventHandler(webapp2.RequestHandler):
 #    def get (self):
 #        self.response.out.write("example return!!")
 
-<<<<<<< HEAD
 # class QuoteHandler(webapp2.RequestHandler):
 #     def get(self):
 #         template = jinja_environment.get_template('checked.html')
