@@ -21,19 +21,10 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 
-class TimeLineHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_env.get_template('checked.html')
-        self.response.write(template.render())
-
 class GifHandler(webapp2.RequestHandler):
     def get(self):
-<<<<<<< HEAD
         template = jinja_environment.get_template('checked.html')
         # template = jinja_environment.get_template('gif.html')
-=======
-        template = jinja_environment.get_template('gif.html')
->>>>>>> bac9b4a3c71aac4c040db6510d461c2a37c1fc2a
         response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
         giphyRand = json.loads(response.read())
         gif = giphyRand["data"]["image_original_url"]
@@ -48,7 +39,6 @@ class GifHandler(webapp2.RequestHandler):
             "image_height": height_image
         }
         self.response.out.write(template.render(gifVariables))
-<<<<<<< HEAD
 """
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
@@ -77,11 +67,6 @@ class AddEventHandler(webapp2.RequestHandler):
         }
         self.response.out.write(addEvent_template.render(templateVariables))
 """
-=======
-
-
-
->>>>>>> bac9b4a3c71aac4c040db6510d461c2a37c1fc2a
 class QuoteHandler(webapp2.RequestHandler):
      def get(self):
          template = jinja_environment.get_template('checked.html')
@@ -90,15 +75,10 @@ class QuoteHandler(webapp2.RequestHandler):
 #         NowDict = json.loads(response.read())
 #         Quote = NowDict["contents"]["quotes"][0]["quote"]
 #         Author = NowDict["contents"]["quotes"][0]["author"]
-<<<<<<< HEAD
 #         self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
          self.response.out.write("<html><center>Quote Here</center></html>")
-=======
 #         self.response.out.write("<center>" + "<font color=white> + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</font>" + "</center>")
          self.response.out.write("<html><center><font color=white>Quote Here</font></center></html>")
-
->>>>>>> bac9b4a3c71aac4c040db6510d461c2a37c1fc2a
-
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
@@ -109,12 +89,9 @@ class AboutHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  ('/home', QuoteHandler),
-  ('/home', TimeLineHandler),
-<<<<<<< HEAD
+  #('/home', QuoteHandler),
  # ('/addEvent', AddEventHandler),
-=======
->>>>>>> bac9b4a3c71aac4c040db6510d461c2a37c1fc2a
+
   ('/home', GifHandler),
   ('/about', AboutHandler)
 ]
