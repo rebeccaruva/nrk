@@ -1,15 +1,47 @@
 <DOCTYPE! html>
-<html>
-
+<html lang ="en">
   <head>
     <title>Checked.</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="/static/checked.css"/>
-      <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-      <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
-      <style type="text/css">a {text-decoration: none}</style>
-      <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/checked.css"/>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <style type="text/css">a {text-decoration: none}</style>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/static/gifAlert.css"/>
+
+    <script>
+    $( function() {
+      $( "#dialog" ).dialog({
+        width: {{image_width}},
+        height: {{image_height}},
+        autoOpen: false,
+        show: {
+          effect: "blind",
+          duration: 1000
+        },
+        hide: {
+          effect: "explode",
+          duration: 1000
+        }
+      });
+      $("#opener").click(function() {
+        $("#dialog").dialog("open");
+        console.log('gif');
+      });
+    } );
+    </script>
+
+
   <body id="home">
     <br />
     <center>
@@ -18,27 +50,24 @@
     <h4 id="description"><center><font color="white">An interactive website to help motivate your daily schedule</font></center></h4>
     <h5 id="poweredby"><center><font color="white">Presented to you by <a href="https://www.checkedcssiproject.appspot.com/about"><font color="white">N.R.K.</font></a></font></center></h5>
 
-<!--
-    <label class="switch">
-      <input type="checkbox">
-      <div class="slider round"></div>
-    </label>
--->
+  </center>
+    <link rel="stylesheet" href="static/practice.css">
+    <script type="text/javascript" src="static/practice.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
-
+    <center>
+        <body id="home">
+        <div id="dialog" title="YOU CHECKED IT!">
+          <img src="{{gif}}" alt=""/>
+        </div>
+        <button id="opener">Celebrate!</button>
+        </body>
     </center>
 
-<link rel="stylesheet" href="static/practice.css">
-<script type="text/javascript" src="static/practice.js"></script>
 
-
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- The Timeline -->
-
 <ul class="timeline">
-
 	<!-- Item 1 -->
 	<li>
 		<div class="direction-r">
@@ -47,17 +76,16 @@
 				<span class="time-wrapper"><span class="time"></span></span>
 			</div>
 
-
       <div class="desc"><div id="myDIV" class="header">
-        <h2>Enter goal(s) for the day</h2>
-        <input type="text" id="Sunday" placeholder="Title...">
+        <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
+        <input type="text" id="Sunday" placeholder="Goal...">
         <span onclick="SundayElement()" class="addBtn">Add</span>
+
       </div>
 
       <ul id="sunday">
-      </ul></div>
-		</div>
-
+    </ul></div>
+	 </div>
 
   </li>
 </ul>
@@ -73,11 +101,10 @@
 
 
       <div class="desc"><div id="myDIV" class="header">
-        <h2>Enter goal(s) for the day</h2>
-        <input type="text" id="Monday" placeholder="Title...">
+        <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
+        <input type="text" id="Monday" placeholder="Goal...">
         <span onclick="MondayElement()" class="addBtn">Add</span>
       </div>
-
       <ul id="monday">
       </ul></div>
 		</div>
@@ -98,9 +125,10 @@
 
       <div class="desc"><div id="myDIV" class="header">
         <h2>Enter goal(s) for the day</h2>
-        <input type="text" id="Tuesday" placeholder="Title...">
+        <input type="text" id="Tuesday" placeholder="Goal...">
         <span onclick="TuesdayElement()" class="addBtn">Add</span>
       </div>
+
 
       <ul id="tuesday">
       </ul></div>
@@ -123,8 +151,8 @@
 
 
     <div class="desc"><div id="myDIV" class="header">
-      <h2>Enter goal(s) for the day</h2>
-      <input type="text" id="Wednesday" placeholder="Title...">
+      <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
+      <input type="text" id="Wednesday" placeholder="Goal...">
       <span onclick="WednesdayElement()" class="addBtn">Add</span>
     </div>
 
@@ -132,14 +160,8 @@
 
     </ul></div>
   </div>
-
-
 </li>
-
-
 </ul>
-
-
 
 <!-- Item 5 -->
 <ul class="timeline">
@@ -153,8 +175,8 @@
 
 
     <div class="desc"><div id="myDIV" class="header">
-      <h2>Enter goal(s) for the day</h2>
-      <input type="text" id="Thursday" placeholder="Title...">
+      <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
+      <input type="text" id="Thursday" placeholder="Goal...">
       <span onclick="ThursdayElement()" class="addBtn">Add</span>
     </div>
 
@@ -179,8 +201,8 @@
 
 
     <div class="desc"><div id="myDIV" class="header">
-      <h2>Enter goal(s) for the day</h2>
-      <input type="text" id="Friday" placeholder="Title...">
+      <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
+      <input type="text" id="Friday" placeholder="Goal...">
       <span onclick="FridayElement()" class="addBtn">Add</span>
     </div>
 
@@ -204,8 +226,8 @@
 
 
     <div class="desc"><div id="myDIV" class="header">
-      <h2>Enter goal(s) for the day</h2>
-      <input type="text" id="Saturday" placeholder="Title...">
+      <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
+      <input type="text" id="Saturday" placeholder="Goal...">
       <span onclick="SaturdayElement()" class="addBtn">Add</span>
     </div>
 
@@ -213,8 +235,6 @@
 
     </ul></div>
   </div>
-
-
 </li>
 </ul>
 
@@ -236,6 +256,8 @@
     </div>
   </div>
 </form>
+
+
 
 
 </body>
