@@ -51,15 +51,6 @@ class AddEventHandler(webapp2.RequestHandler):
         self.response.out.write(addEvent_template.render(templateVariables))
 """
 class QuoteHandler(webapp2.RequestHandler):
-     def get(self):
-         template = jinja_environment.get_template('checked.html')
-         self.response.out.write(template.render())
-         response = urllib2.urlopen("http://quotes.rest/qod.json")
-         NowDict = json.loads(response.read())
-         Quote = NowDict["contents"]["quotes"][0]["quote"]
-         Author = NowDict["contents"]["quotes"][0]["author"]
-         #self.response.out.write("<html><center>Quote Here</center></html>")
-         self.response.out.write("<center>" + "<font color=white>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</font>" + "</center>")
 
      def get(self):
          template = jinja_environment.get_template('checked.html')
@@ -78,6 +69,13 @@ class QuoteHandler(webapp2.RequestHandler):
          }
          self.response.out.write(template.render(gifVariables))
 
+
+         response = urllib2.urlopen("http://quotes.rest/qod.json")
+         NowDict = json.loads(response.read())
+         Quote = NowDict["contents"]["quotes"][0]["quote"]
+         Author = NowDict["contents"]["quotes"][0]["author"]
+         #self.response.out.write("<html><center>Quote Here</center></html>")
+         self.response.out.write("<center>" + "<font color=white>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</font>" + "</center>")
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
