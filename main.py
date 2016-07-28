@@ -114,17 +114,13 @@ class AboutHandler(webapp2.RequestHandler):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 routes = [
   ('/', LoginHandler),
-  # ('/home', QuoteHandler),
+  ('/home', QuoteHandler),
   ('/home', TimeLineHandler),
 #  ('/checked-list', ExpandListHandler),
 #  ('/add-event', AddEventHandler),
   ('/addEvent', AddEventHandler),
-<<<<<<< HEAD
   ('/gif', GifHandler),
   ('/about', AboutHandler)
-=======
-  ('/gif', GifHandler)
  # ('/checked', CheckedHandler)
->>>>>>> 440353dfcd623ab63a5c1a841e349394cdc7d6dd
 ]
 app = webapp2.WSGIApplication(routes, debug=True)
