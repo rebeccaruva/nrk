@@ -28,7 +28,7 @@ class TimeLineHandler(webapp2.RequestHandler):
 
 class GifHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('gif.html')
+        template = jinja_environment.get_template('checked.html')
         # template = jinja_environment.get_template('gif.html')
         response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
         giphyRand = json.loads(response.read())
@@ -44,7 +44,7 @@ class GifHandler(webapp2.RequestHandler):
             "image_height": height_image
         }
         self.response.out.write(template.render(gifVariables))
-
+"""
 class AddEventHandler(webapp2.RequestHandler):
     def get(self):
         checked_template = jinja_env.get_template('checked.html')
@@ -71,12 +71,7 @@ class AddEventHandler(webapp2.RequestHandler):
             "image_height": height_image
         }
         self.response.out.write(addEvent_template.render(templateVariables))
-
-class QuoteHandler(webapp2.RequestHandler):
-     def get(self):
-        template = jinja_environment.get_template('checked.html')
-        self.response.out.write(template.render())
-
+"""
 class QuoteHandler(webapp2.RequestHandler):
      def get(self):
          template = jinja_environment.get_template('checked.html')
