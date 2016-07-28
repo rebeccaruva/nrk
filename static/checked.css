@@ -1,14 +1,19 @@
+/* main page font for site */
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
   color: white;
 }
+
+/* title text for home */
 #name {
   font-family: 'Rajdhani', sans-serif;
   font-size: 65px;
   color: white;
   text-shadow: 3px 3px black;
 }
+
+/* subtitle text for home */
 #description {
   font-family: 'Rajdhani', sans-serif;
   font-size: 32px;
@@ -19,10 +24,8 @@ body {
   font-size: 25px;
   color: white;
 }
-#signin {
-  top: 50%;
-}
 
+/* page background for home */
 #home {
   background-position: center;
   background-repeat: no-repeat;
@@ -30,12 +33,15 @@ body {
   background-attachment: fixed;
 }
 
+/* page background for login */
 #login {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("roadForest.jpg");
   background-attachment: fixed;
 }
+
+/* login title text */
 .loginName {
   /*height: 4em;
   padding-top: 2px;
@@ -58,6 +64,8 @@ body {
 .ontop {
   text-shadow: 3px 3px black;
 }
+
+/* Google sign in button */
 .g-signin2 {
     position: absolute;
     top: 50%;
@@ -65,11 +73,6 @@ body {
     margin-top: -50px;
     margin-left: -50px;
 }
-
-
-
-
-
 
 /* The switch - the box around the slider */
 .switch {
