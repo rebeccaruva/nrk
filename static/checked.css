@@ -135,3 +135,16 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/* sign out button */
+.signOut {
+  background-color: white;
+  border: none;
+  color: grey;
+  font-size: 15px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  vertical-align: text-top;
+  text-align: center;
+  line-height: 20px;
+}
