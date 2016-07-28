@@ -77,16 +77,21 @@ class AddEventHandler(webapp2.RequestHandler):
 #        self.response.out.write("example return!!")
 
 
-# class QuoteHandler(webapp2.RequestHandler):
-#     def get(self):
-#         template = jinja_environment.get_template('checked.html')
-#         self.response.out.write(template.render())
+class QuoteHandler(webapp2.RequestHandler):
+     def get(self):
+        template = jinja_environment.get_template('checked.html')
+        self.response.out.write(template.render())
+
+class QuoteHandler(webapp2.RequestHandler):
+     def get(self):
+         template = jinja_environment.get_template('checked.html')
+         self.response.out.write(template.render())
 #         response = urllib2.urlopen("http://quotes.rest/qod.json")
 #         NowDict = json.loads(response.read())
 #         Quote = NowDict["contents"]["quotes"][0]["quote"]
 #         Author = NowDict["contents"]["quotes"][0]["author"]
 #         self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
-        #self.response.out.write("<html><center>Quote Here</center></html>")
+         self.response.out.write("<html><center>Quote Here</center></html>")
 
 
 #class CheckedHandler(webapp2.RequestHandler):
