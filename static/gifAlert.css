@@ -6,6 +6,8 @@ body {
   background-image: url("forest.jpg");
   background-attachment: fixed;
 }
+
+/* dialog format */
 #dialog {
   opacity: 20%;
 }

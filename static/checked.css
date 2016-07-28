@@ -1,3 +1,4 @@
+
 /* main page font for site */
 body {
   font-family: 'Rajdhani', sans-serif;
@@ -73,6 +74,7 @@ body {
     margin-top: -50px;
     margin-left: -50px;
 }
+
 
 /* The switch - the box around the slider */
 .switch {
