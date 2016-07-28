@@ -44,32 +44,32 @@ class GifHandler(webapp2.RequestHandler):
         }
         self.response.out.write(template.render(gifVariables))
 
-class AddEventHandler(webapp2.RequestHandler):
-    def get(self):
-        checked_template = jinja_env.get_template('checked.html')
-        self.response.out.write(checked_template.render())
+#class AddEventHandler(webapp2.RequestHandler):
+#    def get(self):
+#        checked_template = jinja_env.get_template('checked.html')
+#        self.response.out.write(checked_template.render())
         #checked_template.put()
-    def post(self):
-        addEvent_template = jinja_env.get_template('addEvent.html')
+#    def post(self):
+#        addEvent_template = jinja_env.get_template('addEvent.html')
         # template_variables = {
         #     'main':self.request.get("main")
         #     }
         # self.response.out.write(addEvent_template.render(template_variables))
         # template = jinja_environment.get_template('gif.html')
-        response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
-        giphyRand = json.loads(response.read())
-        gif = giphyRand["data"]["image_original_url"]
-        width = giphyRand["data"]["image_width"]
-        width = int(width) + 20
-        height = giphyRand["data"]["image_height"]
-        height = int(height) + 45
-        templateVariables = {
-            'main':self.request.get("main"),
-            "gif": gif,
-            "image_width": width,
-            "image_height": height
-        }
-        self.response.out.write(addEvent_template.render(templateVariables))
+#        response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
+#        giphyRand = json.loads(response.read())
+#        gif = giphyRand["data"]["image_original_url"]
+#        width = giphyRand["data"]["image_width"]
+#        width = int(width) + 20
+#        height = giphyRand["data"]["image_height"]
+#        height = int(height) + 45
+#        templateVariables = {
+#            'main':self.request.get("main"),
+#            "gif": gif,
+#            "image_width": width,
+#            "image_height": height
+#        }
+#        self.response.out.write(addEvent_template.render(templateVariables))
 
 #class ExpandListHandler(webapp2.RequestHandler):
 #    def get (self):
@@ -79,12 +79,12 @@ class QuoteHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('checked.html')
         self.response.out.write(template.render())
-        response = urllib2.urlopen("http://quotes.rest/qod.json")
-        NowDict = json.loads(response.read())
-        Quote = NowDict["contents"]["quotes"][0]["quote"]
-        Author = NowDict["contents"]["quotes"][0]["author"]
-        self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
-        #self.response.out.write("<html><center>Quote Here</center></html>")
+        #response = urllib2.urlopen("http://quotes.rest/qod.json")
+        #NowDict = json.loads(response.read())
+        #Quote = NowDict["contents"]["quotes"][0]["quote"]
+        #Author = NowDict["contents"]["quotes"][0]["author"]
+        #self.response.out.write("<center>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</center>")
+        self.response.out.write("<html><center>Quote Here</center></html>")
 
 
 #class CheckedHandler(webapp2.RequestHandler):
@@ -112,7 +112,7 @@ routes = [
   ('/home', TimeLineHandler),
 #  ('/checked-list', ExpandListHandler),
 #  ('/add-event', AddEventHandler),
-  ('/addEvent', AddEventHandler),
+#  ('/addEvent', AddEventHandler),
   ('/gif', GifHandler)
  # ('/checked', CheckedHandler)
 ]
