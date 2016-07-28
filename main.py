@@ -29,7 +29,6 @@ class TimeLineHandler(webapp2.RequestHandler):
 class GifHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('gif.html')
-        # template = jinja_environment.get_template('gif.html')
         response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
         giphyRand = json.loads(response.read())
         gif = giphyRand["data"]["image_original_url"]
@@ -56,7 +55,7 @@ class QuoteHandler(webapp2.RequestHandler):
 #         Quote = NowDict["contents"]["quotes"][0]["quote"]
 #         Author = NowDict["contents"]["quotes"][0]["author"]
 #         self.response.out.write("<center>" + "<font color=white> + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</font>" + "</center>")
-         self.response.out.write("<html><center>Quote Here</center></html>")
+         self.response.out.write("<html><center><font color=white>Quote Here</font></center></html>")
 
 
 
