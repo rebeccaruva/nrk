@@ -257,14 +257,15 @@
     </div>
   <form action="/" class="inline">
     <div id="signOutButton">
-      <a href="#" onclick="GoogleAuth.signOut();"><button class="signOut">Sign Out</button></a>
+      <a href="#" onclick="signOut();"><button class="signOut">Sign Out</button></a>
       <script>
-        function GoogleAuth.signOut() {
+        function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();
           auth2.signOut().then(function () {
             console.log('User signed out.');
+            window.location.replace("http://checkedcssiproject.appspot.com/");
           });
-        }
+      }
       </script>
     </div>
   </div>
