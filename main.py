@@ -79,12 +79,12 @@ class MainHandler(webapp2.RequestHandler):
          self.response.out.write(template.render(gifVariables))
 
 
-         response = urllib2.urlopen("http://quotes.rest/qod.json")
-         NowDict = json.loads(response.read())
-         Quote = NowDict["contents"]["quotes"][0]["quote"]
-         Author = NowDict["contents"]["quotes"][0]["author"]
-         #self.response.out.write("<html><center>Quote Here</center></html>")
-         self.response.out.write("<center>" + "<font color=white>" + ' "' + Quote + '" ' "<br>" + "-" + Author + "</font>" + "</center>")
+        #  response = urllib2.urlopen("http://quotes.rest/qod.json")
+        #  NowDict = json.loads(response.read())
+        #  Quote = NowDict["contents"]["quotes"][0]["quote"]
+        #  Author = NowDict["contents"]["quotes"][0]["author"]
+        #  #self.response.out.write("<html><center>Quote Here</center></html>")
+        #  self.response.out.write("<center>" + "<font color=white>" + ' "' + Quote + '" ' "<br>" + "-" + Author + "</font>" + "</center>")
 
      def post(self):
          goals = Goals(text=self.request.get('goalSunday'))
