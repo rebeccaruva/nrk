@@ -75,7 +75,7 @@ class QuoteHandler(webapp2.RequestHandler):
          Quote = NowDict["contents"]["quotes"][0]["quote"]
          Author = NowDict["contents"]["quotes"][0]["author"]
          #self.response.out.write("<html><center>Quote Here</center></html>")
-         self.response.out.write("<center>" + "<font color=white>" + ' " ' + Quote + ' " ' "<br>" + "-" + Author + "</font>" + "</center>")
+         self.response.out.write("<center>" + "<font color=white>" + ' "' + Quote + '" ' "<br>" + "-" + Author + "</font>" + "</center>")
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
