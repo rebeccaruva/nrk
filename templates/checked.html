@@ -77,7 +77,7 @@
     </center>
 
 
-
+<form method="post" action="home">
 <!-- The Timeline -->
 <ul class="timeline">
 	<!-- Item 1 -->
@@ -90,8 +90,8 @@
 
       <div class="desc"><div id="myDIV" class="header">
         <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
-        <input type="text" id="Sunday" placeholder="Goal...">
-        <span onclick="SundayElement()" class="addBtn">Add</span>
+        <input type="text" id="Sunday" placeholder="Goal..." name="goalSunday">
+        <span onclick="SundayElement()" class="addBtn" value="Submit">Add</span>
 
       </div>
 
@@ -114,7 +114,7 @@
 
       <div class="desc"><div id="myDIV" class="header">
         <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
-        <input type="text" id="Monday" placeholder="Goal...">
+        <input type="text" id="Monday" placeholder="Goal..." name="goal">
         <span onclick="MondayElement()" class="addBtn">Add</span>
       </div>
       <ul id="monday">
@@ -137,7 +137,7 @@
 
       <div class="desc"><div id="myDIV" class="header">
         <h2>Enter goal(s) for the day</h2>
-        <input type="text" id="Tuesday" placeholder="Goal...">
+        <input type="text" id="Tuesday" placeholder="Goal..." name="goal">
         <span onclick="TuesdayElement()" class="addBtn">Add</span>
       </div>
 
@@ -164,7 +164,7 @@
 
     <div class="desc"><div id="myDIV" class="header">
       <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
-      <input type="text" id="Wednesday" placeholder="Goal...">
+      <input type="text" id="Wednesday" placeholder="Goal..." name="goal">
       <span onclick="WednesdayElement()" class="addBtn">Add</span>
     </div>
 
@@ -188,7 +188,7 @@
 
     <div class="desc"><div id="myDIV" class="header">
       <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
-      <input type="text" id="Thursday" placeholder="Goal...">
+      <input type="text" id="Thursday" placeholder="Goal..." name="goal">
       <span onclick="ThursdayElement()" class="addBtn">Add</span>
     </div>
 
@@ -214,7 +214,7 @@
 
     <div class="desc"><div id="myDIV" class="header">
       <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
-      <input type="text" id="Friday" placeholder="Goal...">
+      <input type="text" id="Friday" placeholder="Goal..." name="goal">
       <span onclick="FridayElement()" class="addBtn">Add</span>
     </div>
 
@@ -239,7 +239,7 @@
 
     <div class="desc"><div id="myDIV" class="header">
       <h3>Enter goal(s) for the day, check when done, then hit celebrate!</h3>
-      <input type="text" id="Saturday" placeholder="Goal...">
+      <input type="text" id="Saturday" placeholder="Goal..." name="goal">
       <span onclick="SaturdayElement()" class="addBtn">Add</span>
     </div>
 
@@ -249,6 +249,7 @@
   </div>
 </li>
 </ul>
+</form>
 
   <div id="wrapperDiv">
     <div id="printButton">
