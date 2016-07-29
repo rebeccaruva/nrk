@@ -59,10 +59,6 @@ class MainHandler(webapp2.RequestHandler):
 
      def get(self):
          template = jinja_environment.get_template('checked.html')
-
-        #  user = users.get_current_user()
-        #  emailAddress = user.email()
-
          response = urllib2.urlopen("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration&fmt=json")
          giphyRand = json.loads(response.read())
          gif = giphyRand["data"]["image_original_url"]
@@ -78,19 +74,18 @@ class MainHandler(webapp2.RequestHandler):
          }
          self.response.out.write(template.render(gifVariables))
 
+         #response = urllib2.urlopen("http://quotes.rest/qod.json")
+         #NowDict = json.loads(response.read())
+         #Quote = NowDict["contents"]["quotes"][0]["quote"]
+         #Author = NowDict["contents"]["quotes"][0]["author"]
+         self.response.out.write("<html><center>Quote Here</center></html>")
+         #self.response.out.write("<center>" + "<font color=white>" + ' "' + Quote + '" ' "<br>" + "-" + Author + "</font>" + "</center>")
 
-        #  response = urllib2.urlopen("http://quotes.rest/qod.json")
-        #  NowDict = json.loads(response.read())
-        #  Quote = NowDict["contents"]["quotes"][0]["quote"]
-        #  Author = NowDict["contents"]["quotes"][0]["author"]
-        #  #self.response.out.write("<html><center>Quote Here</center></html>")
-        #  self.response.out.write("<center>" + "<font color=white>" + ' "' + Quote + '" ' "<br>" + "-" + Author + "</font>" + "</center>")
-
-     def post(self):
+'''     def post(self):
          goals = Goals(text=self.request.get('goalSunday'))
          finalGoal = goals.put()
          time.sleep(.2)
-         self.redirect('/home')
+         self.redirect('/home') '''
 
 
 class AboutHandler(webapp2.RequestHandler):
